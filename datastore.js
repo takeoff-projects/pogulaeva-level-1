@@ -16,7 +16,7 @@ const config = require('./config');
 const {Datastore} = require('@google-cloud/datastore');
 
 const ds = new Datastore({
-  projectId: config.get('GCLOUD_PROJECT')
+  projectId: config.get('GOOGLE_CLOUD_PROJECT')
 });
 
 const kind = 'Tasks';

@@ -23,7 +23,7 @@ nconf
   .argv()
   // 2. Environment variables
   .env([
-    'GCLOUD_PROJECT',
+    'GOOGLE_CLOUD_PROJECT',
     'NODE_ENV',
     'PORT'
   ])
@@ -33,14 +33,14 @@ nconf
   .defaults({
 
     // This is the id of your project in the Google Cloud Developers Console.
-    GCLOUD_PROJECT: '',
+    GOOGLE_CLOUD_PROJECT: '',
     GCLOUD_BUCKET: '',
 
     PORT: 8080
   });
 
 // Check for required settings
-checkConfig('GCLOUD_PROJECT');
+checkConfig('GOOGLE_CLOUD_PROJECT');
 
 function checkConfig (setting) {
   if (!nconf.get(setting)) {
