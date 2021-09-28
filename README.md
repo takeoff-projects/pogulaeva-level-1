@@ -4,3 +4,5 @@ This is a simple `Nodejs` web application project which record todo items and st
 You can install all dependencies by running
 
 ``` npm install ```
+
+Contributor: Daria Poguliaieva
