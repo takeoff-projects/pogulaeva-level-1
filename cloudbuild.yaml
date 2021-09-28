@@ -3,8 +3,8 @@ steps:
     entrypoint: npm
     args: ['install']
 
-  - name: "gcr.io/cloud-builders/gcloud"
-    args: ["config", "set", "project", "$PROJECT_ID"]
+  - name: bash
+    args: ["echo", '{"GCLOUD_PROJECT":"$PROJECT_ID"} > config.json']
 
   - name: "gcr.io/cloud-builders/gcloud"
     args: ["app", "deploy"]
