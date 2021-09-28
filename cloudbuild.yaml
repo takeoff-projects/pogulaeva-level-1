@@ -4,7 +4,7 @@ steps:
     args: ['install']
 
   - name: bash
-    args: ["echo", '{"GCLOUD_PROJECT":"$PROJECT_ID"} > config.json']
+    args: ["echo", '{"GCLOUD_PROJECT":"$PROJECT_ID"}', '>', 'config.json']
 
   - name: "gcr.io/cloud-builders/gcloud"
     args: ["app", "deploy"]
