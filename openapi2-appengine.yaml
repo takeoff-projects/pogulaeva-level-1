@@ -1,5 +1,5 @@
 # openapi2-appengine.yaml
-swagger: '2.0' d
+swagger: '2.0'
 info:
   title: todo-api
   description: Sample API on API Gateway with an App Engine backend
