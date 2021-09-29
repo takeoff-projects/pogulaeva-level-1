@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1 style="text-align: center">Nodejs App : Todo App</h1>
+    <h1 style="text-align: center">Task List</h1>
     <div class="container">
         <div class="content-left-wrapper">
             <h2 style="padding-left: 110px;"> List of Todos </h2>
@@ -22,7 +22,7 @@
                                 <%= todo.title   %>
                             </div>
                             <div class="todo-list-action">
-                                <a href="/todo/<%= todo.id %> ">Delete</a>
+                                <a href="/delete/<%= todo.id %>">Delete</a>
                             </div>
                         </div>
                         <% }) %>
@@ -36,10 +36,10 @@
                 <div class="todo-form-items-wrapper">
                     <form action="/" method="POST">
                         <div class="todo-form-item">
-                            <p style="text-align: left;"> <i> eg: Learn Python from Udemy</i></p>
+                            <p style="text-align: left;"> <i> eg: Learn NodeJS</i></p>
                         </div>
                         <div class="todo-form-item">
-                            <input type="text" placeholder="Eneter your todo" name="todo_content" id="todo_content">
+                            <input type="text" placeholder="Enter your todo" name="todo_content" id="todo_content">
                         </div>
                         <div class="todo-form-item">
                             <input type="submit" value="Post">

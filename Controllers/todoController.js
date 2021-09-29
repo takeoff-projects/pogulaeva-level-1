@@ -7,7 +7,6 @@
 
      app.get('/', function(req, res, next) {
          model.list().then(data => {
-             console.log(data);
              res.render('index', {
                  todos: data.tasks
              });
@@ -20,7 +19,6 @@
      app.post('/', urlencodeparser, function(req, res, next) {
          model.create(req.body.todo_content)
              .then(entity => {
-                 console.log('Item saved');
                  res.redirect('/')
              })
              .catch(err => {
@@ -29,7 +27,7 @@
              });
      });
 
-     app.get('/todo/:id', function(req, res, next) {
+     app.get('/delete/:id', function(req, res, next) {
          model.remove(req.params.id).then(() => {
              res.redirect('/');
          }).catch(err => {

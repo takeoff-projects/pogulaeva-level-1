@@ -1,5 +1,6 @@
 body {
     background-color: skyblue;
+    font-family: Arial;
 }
 
 h2 {
@@ -10,7 +11,7 @@ h2 {
     /* background-color: skyblue; */
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 5 px;
+    padding: 5px;
 }
 
 .content-left-wrapper {
