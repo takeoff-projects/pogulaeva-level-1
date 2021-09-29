@@ -1,0 +1,23 @@
+# openapi2-appengine.yaml
+swagger: '2.0' d
+info:
+  title: todo-api
+  description: Sample API on API Gateway with an App Engine backend
+  version: 1.0.0
+schemes:
+  - https
+produces:
+  - application/json
+paths:
+  /list:
+    get:
+      summary: Get Task List
+      operationId: list
+      x-google-backend:
+        address: https://roi-takeoff-user53.uc.r.appspot.com/api/list
+        jwt_audience: 241581928204-651s8r0aks1hukbcn2sivfacp5ijdtbo.apps.googleusercontent.com
+      responses:
+        '200':
+          description: A successful response
+          schema:
+            type: string
