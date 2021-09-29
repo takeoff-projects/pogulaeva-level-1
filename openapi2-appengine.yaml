@@ -21,3 +21,27 @@ paths:
           description: A successful response
           schema:
             type: string
+  /add:
+    post:
+      summary: Add a Task
+      operationId: add
+      x-google-backend:
+        address: https://roi-takeoff-user53.uc.r.appspot.com/api/add
+        jwt_audience: 241581928204-651s8r0aks1hukbcn2sivfacp5ijdtbo.apps.googleusercontent.com
+      responses:
+        '200':
+          description: A successful response
+          schema:
+            type: string
+  /delete:
+    delete:
+      summary: Delete a Task
+      operationId: delete
+      x-google-backend:
+        address: https://roi-takeoff-user53.uc.r.appspot.com/api/delete
+        jwt_audience: 241581928204-651s8r0aks1hukbcn2sivfacp5ijdtbo.apps.googleusercontent.com
+      responses:
+        '200':
+          description: A successful response
+          schema:
+            type: string

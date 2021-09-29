@@ -5,12 +5,13 @@ var urlencodeparser = bodyParser.urlencoded({ extended: false });
 
 module.exports = function(app) {
     app.get('/api/list', urlencodeparser, function(req, res, next) {
-        model.list().then(data => {
-            res.send(JSON.stringify(data));
-        }).catch(err => {
-            next(err);
-            return;
-        });
+        model.list()
+            .then(data => {
+                res.send(JSON.stringify(data));
+            }).catch(err => {
+                next(err);
+                return;
+            });
     });
     app.post('/api/add', urlencodeparser, function(req, res, next) {
         model.create(req.body.title)
@@ -24,14 +25,15 @@ module.exports = function(app) {
                 return;
             });
     });
-    app.get('/api/delete/:id', function(req, res, next) {
-        model.remove(req.params.id).then(data => {
-            res.send(JSON.stringify({
-                success: data[0].indexUpdates!==0
-            }));
-        }).catch(err => {
-            next(err);
-            return;
-        });
+    app.delete('/api/delete', urlencodeparser, function(req, res, next) {
+        model.remove(req.body.id)
+            .then(data => {
+                res.send(JSON.stringify({
+                    success: data[0].indexUpdates!==0
+                }));
+            }).catch(err => {
+                next(err);
+                return;
+            });
     });
 };
