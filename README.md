@@ -1,5 +1,5 @@
 
-Leve 1 and 2
+Level 1 and 2
 
 Contributor: Daria Poguliaieva
 
@@ -20,7 +20,7 @@ Following npm packages used in this project:
 
 ## Web Application CI/CD flow:
 1. Commit and push changes to Git
-2. Trigger in Cloud Build listens to these changes and starts building which is configured in cloudbuild.yaml file:
+2. Trigger in Cloud Build listens to these changes and starts building which is configured in [cloudbuild.yaml](https://github.com/takeoff-projects/pogulaeva-level-1/blob/main/cloudbuild.yaml) file:
    * npm install
    * gcloud app deploy
 3. Changes will be deployed to App Engine
@@ -30,7 +30,7 @@ Following npm packages used in this project:
 Web application uses environment variables which are set in App Engine: GOOGLE_CLOUD_PROJECT, PORT
 
 # Application API
-## Create OpenApi config file
+## OpenApi config file
 [openapi2-appengine.yaml](https://github.com/takeoff-projects/pogulaeva-level-1/blob/main/openapi2-appengine.yaml)
 
 ## Configuring Gateway API
